@@ -1,0 +1,563 @@
+.logo {
+	width: 110px;
+	height: auto;
+
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100px;
+	background-color: #FECFD8;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	/* border-radius: 20px; */
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.477);
+
+
+
+
+}
+
+
+.bodyHomePage {
+	width: 100%;
+	/* height: 100vh; */
+	background: linear-gradient(to top, #e3aadd, #c8a8e9, #c3c7f3);
+	margin-top: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+}
+
+
+
+.contentHomePage {
+	width: 50%;
+	/* border: 1px solid; */
+
+
+}
+
+
+.box1 {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 100px;
+	color: white;
+	padding-left: 30px;
+	/* width: 100%; */
+	opacity: 0;
+	transform: translateY(50px);
+	/* Dịch chuyển box xuống dưới một chút */
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+	margin-top: 200px;
+}
+
+
+.box1.show {
+	opacity: 1;
+	transform: translateY(0);
+	/* Đưa box về vị trí ban đầu */
+}
+
+
+.imgHomePage1 {
+	width: 50%;
+	height: auto;
+	border-radius: 20px;
+
+}
+.img2{
+	box-shadow: 0 0 20px black;
+	margin-right: 20px;
+	width: 40%;
+}
+
+.titleHomePage1 {
+	font-size: 40px;
+}
+
+.titleHomePage2 {
+	font-size: 60px;
+	width: 100%;
+	margin: 0;
+	
+}
+
+.contextHomePage {
+	margin-top: 50px;
+	width: 100%;
+	/* border: 1px solid; */
+	font-size: 18px;
+	font-family: "Open Sans", sans-serif;
+}
+
+.contentHomePageBox3{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* background-color: red; */
+	width: 100%;
+}
+h2{
+	/* display: flex;
+	justify-content: center; */
+	display: inline-block;
+	/* background-color: pink; */
+}
+
+.featuredProductBox{
+	margin-top: 50px;
+	display: flex;	
+	justify-content: start;
+	align-items: center;
+	width: 100%;
+	/* background-color: red; */
+	/* flex-wrap: wrap; */
+	overflow-x: hidden;
+	
+}
+
+.products {
+	background-color: rgb(136, 67, 67);
+
+}
+.ft1{
+	/* background-color: #aa68ec32; */
+	background-color: #c3c7f3ad;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;		
+	align-items: center;	
+
+	width: 300px;
+	height: 300px;
+	/* width: 26%;
+	aspect-ratio: 1 / 1; */
+	border-radius: 50%;
+	position: relative;
+	/* box-shadow: 0 0 10px #aa68ece0; */
+	box-shadow: 0 0 10px #c3c7f3ad;
+	margin: 20px 30px ;
+	transition: all 1s ease;
+
+}
+
+.ft1:hover {
+	transform: scale(1.1);
+}
+
+.ft2{
+	background-color: #f3DCDC;
+	box-shadow: 0 0 10px #f3dcdc94;
+}
+
+.ft3 {
+	background-color: #f5bcbaa7;
+	box-shadow: 0 0 10px #f5bcbaa7;
+}
+
+.box3{
+	flex-direction: column;
+	margin-top: 50px;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 0;
+	/* background-color: red; */
+}
+
+.imgFt{
+	width: 300px;
+	
+	overflow: hidden;
+	object-fit: cover;
+		/* Giữ tỷ lệ ảnh khi cắt */
+		clip-path: circle(50% at 50% 50%);
+		/* Cắt ảnh thành hình tròn */
+}
+
+.nameFt{
+	position: absolute;
+	bottom: 20px;
+}
+.body {
+	width: 100%;
+	display: flex;
+	/* flex-direction: column; */
+	justify-content: center;
+	/* align-items: center; */
+	margin-top: 20px;
+	height: 100%;
+
+}
+
+.search {
+
+	width: 30%;
+	height: 30px;
+	border: 1px solid rgb(182, 182, 182);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	margin-top: 120px;
+}
+
+.viewCart {
+	background-color: #c3c7f3;
+	width: 500px;
+	height: 70%;
+	margin-top: 20px;
+	border-radius: 20px;
+	display: flex;
+	/* flex-direction: column; */
+	flex-wrap: wrap;
+	position: fixed;
+	/* align-items: center	; */
+	justify-content: center;
+	padding: 20px 0;
+	right: 0;
+	top: 20%;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.456);
+	overflow-y: scroll;
+	display: none;
+	z-index: 2;
+}
+
+.mask {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.359);
+	display: none;
+	z-index: 1;
+}
+
+.viewCart::-webkit-scrollbar {
+	width: 0;
+	/* Ẩn thanh cuộn dọc */
+	height: 0;
+	/* Nếu cần, ẩn thanh cuộn ngang */
+}
+
+.viewCart::-webkit-scrollbar-track {
+	background: transparent;
+	/* Ẩn phần thanh cuộn */
+}
+
+.viewCart::-webkit-scrollbar-thumb {
+	background: transparent;
+	/* Ẩn phần thanh cuộn */
+}
+
+.cartItem {
+	width: 90%;
+	height: 200px;
+	background-color: rgb(255, 255, 255);
+	display: flex;
+	border-radius: 20px;
+	border: 0.5px solid rgb(157, 155, 155);
+	align-items: center;
+	overflow: hidden;
+	margin-top: 10px;
+}
+
+.imageDelete {
+	width: 30px;
+	height: 30px;
+}
+
+.btnDelete {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	background-color: #aa68ec00;
+	margin-right: 10px;
+	cursor: pointer;
+	transition: all 1s ease;
+	border-radius: 50%;
+}
+
+.btnDelete:hover {
+	background-color: #c3c7f3;
+	color: white;
+}
+
+
+.numberCart {
+	position: absolute;
+	background-color: rgba(255, 0, 0, 0.872);
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	top: 25px;
+	left: 75px;
+	z-index: 0;
+	display: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+.imageCartItem {
+	height: 100%;
+	width: 45%;
+}
+
+.btnSearch {
+	width: 100px;
+	height: 30px;
+	border: none;
+	background-color: #c3c7f3;
+	color: white;
+	border-radius: 20px;
+	cursor: pointer;
+	outline: none;
+	font-weight: bold;
+	transition: all 1s ease;
+}
+
+#idItem {
+	position: absolute;
+	background-color: #c3c7f3;
+	top: 10px;
+	left: 10px;
+	width: 25px;
+	height: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	color: #aa68ec;
+}
+
+.triangle-up {
+	cursor: pointer;
+	border: none;
+	background-color: #aa68ec00;
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 10px solid;
+	transition: all 1 ease;
+	/* Màu xanh cho tam giác tăng */
+}
+
+.triangle-up:hover {
+	transform: scale(1.1);
+}
+
+.triangle-down {
+	cursor: pointer;
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 10px solid black;
+	transition: all 1 ease;
+}
+
+.triangle-down:hover {
+	transform: scale(1.1);
+}
+
+.quantity {
+	border-left: 1px solid;
+	padding-left: 10px;
+	height: 50px;
+	width: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	/* background-color: red; */
+}
+
+.btnSearch:hover {
+	background-color: #aa68ec;
+}
+
+.inputSearch {
+	width: 80%;
+	height: 90%;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	outline: none;
+	padding-left: 20px;
+	caret-color: rgb(182, 182, 182);
+	color: rgb(182, 182, 182);
+}
+
+.items {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	padding: 20px 0;
+	background: linear-gradient(to top, #e3aadd, #c8a8e9, #c3c7f3);
+	margin-top: 20px;
+	justify-content: center;	
+}
+
+.item {
+	position: relative;
+	width: 250px;
+	height: 250px;
+	box-shadow: 0 0 5px;
+	border-radius: 20px;
+	margin: 30px;
+	transition: all 1s ease;
+	cursor: pointer;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: none;
+	align-items: center;
+}
+
+.item:hover {
+	transform: scale(1.1);
+}
+
+.card {
+	position: relative;
+	width: 150px;
+	height: 70%;
+	z-index: 0;
+	cursor: pointer;
+	font-size: 20px;
+	color: #b59399;
+	background-color: rgba(188, 143, 143, 0);
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* border: 1px solid; */
+	font-family: "Oswald", sans-serif;
+	font-weight: 300;
+	
+}
+
+.products {
+	background-color: #c3c7f3;
+	border-radius: 20px;
+
+}
+
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: auto;
+	scrollbar-width: none;
+	/* Firefox */
+	-ms-overflow-style: none;
+	/* IE 10+ */
+	overflow-y: scroll;
+		scrollbar-width: none;
+		/* Firefox */
+	
+		/* Ẩn thanh cuộn trên Cốc Cốc (vì là Chromium) */
+}
+
+body::-webkit-scrollbar {
+	display: none;
+	/* Safari and Chrome */
+}
+
+
+.imageItem {
+	height: 75%;
+	width: 100%;
+}
+
+.detailItems {
+	height: 30%;
+	width: 100%;
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.detailsBakery {
+	position: relative;
+	height: 100%;
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 10px;
+}
+
+.priceItem {
+	display: flex;
+
+}
+
+.main {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.addCart {
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+	border: none;
+	background-color: rgba(102, 51, 153, 0);
+	color: #c3c7f3;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	transition: all 1s ease;
+}
+
+.addCart:hover {
+	background-color: rgb(157, 26, 52);
+}
+
+.detailsBakery {
+	color: rgb(157, 26, 52);
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nameBakery {
+	color: black;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.priceItem {
+	font-weight: 700;
+}
+
+.currency {
+	margin-left: 5px;
+}
