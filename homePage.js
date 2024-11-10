@@ -1,3 +1,16 @@
+//thu ngan header khi cuon xuong
+window.addEventListener('scroll', function () {
+  const header = document.querySelector('.header');
+  if (window.scrollY > 100) {
+    // Kiểm tra nếu đã cuộn quá 50px
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+
+
 // Hàm điều hướng đến trang sản phẩm
 function navigateToProducts() {
   window.location.href = 'products.html'; // Chuyển hướng đến products.html
